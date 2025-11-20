@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>GFS Ernährung und Verdauung</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        height: 100vh;
+    }
+
+    .menu {
+        width: 250px;
+        background: #f0f0f0;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    }
+
+    .menu button {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        background: #4CAF50;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .menu button:hover {
+        background: #45a049;
+    }
+
+    .content {
+        padding: 30px;
+        flex-grow: 1;
+        overflow-y: auto;
+    }
+
+    img {
+        max-width: 60%;
+        display: block;
+        margin: 20px auto;
+        border-radius: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="menu">
+    <button onclick="show('ernaehrungsformen')">Ernährungsformen</button>
+    <button onclick="show('gesundeErnaehrung')">Gesunde Ernährung</button>
+    <button onclick="show('nahrungsergaenzung')">Nahrungsergänzungsmittel</button>
+    <button onclick="show('fehlernaehrung')">Fehlernährung & Folgen</button>
+    <button onclick="show('verdauung')">Verdauung des Menschen</button>
+</div>
+
+<div class="content" id="content">
+    <h1>Willkommen!</h1>
+    <p>Klicke links auf ein Thema, um die Präsentation zu starten.</p>
+</div>
+
+<script>
+    function show(part) {
+        fetch(part + ".html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("content").innerHTML = data;
+        });
+    }
+</script>
+
+</body>
+</html>

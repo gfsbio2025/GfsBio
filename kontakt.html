@@ -1,15 +1,50 @@
-<h1>Kontakt & Quellen</h1>
+<!doctype html>
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kontakt & Quellen — GFS</title>
+<style>
+:root{--accent:#2e8b57;--card:rgba(255,255,255,0.95);--muted:#666}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;color:#123;background:#f7f7f7}
+.bg{position:fixed;inset:0;background:url('assets/background.jpg') center/cover no-repeat;filter:blur(8px);transform:scale(1.02);z-index:-2}
+.overlay{position:fixed;inset:0;background:linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.6));z-index:-1}
+.container{max-width:1100px;margin:30px auto;display:grid;grid-template-columns:260px 1fr;gap:20px;padding:18px}
+.sidebar{background:var(--card);padding:18px;border-radius:12px;height:calc(100vh-80px);box-shadow:0 10px 30px rgba(0,0,0,0.06);overflow:auto}
+.nav-btn{display:block;padding:12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#3cb371);color:#fff;text-decoration:none;font-weight:700;margin-bottom:10px}
+.content{background:var(--card);padding:26px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.06);min-height:calc(100vh-80px);overflow:auto}
+.section-img{max-width:60%;display:block;margin:18px auto;border-radius:12px}
+@media(max-width:900px){.container{grid-template-columns:1fr;padding:12px}}
+</style>
+</head>
+<body>
+<div class="bg"></div><div class="overlay"></div>
+<div class="container">
+  <aside class="sidebar">
+    <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
+      <img src="assets/header-fruits.jpg" alt="" onerror="this.style.display='none'">
+      <div><strong>GFS</strong><div style="color:var(--muted);font-size:13px">Kontakt & Quellen</div></div>
+    </div>
 
-<p>Wenn du Fragen hast oder Quellen brauchst, hier die wichtigsten Hinweise.</p>
+    <a class="nav-btn" href="index.html">Home</a>
+    <a class="nav-btn" href="ernaehrungsformen.html">Ernährungsformen</a>
+    <a class="nav-btn" href="gesundeErnaehrung.html">Gesunde Ernährung</a>
+    <a class="nav-btn" href="nahrungsergaenzung.html">Nahrungsergänzung</a>
+    <a class="nav-btn" href="fehlernaehrung.html">Fehlernährung</a>
+    <a class="nav-btn" href="verdauung.html">Verdauung</a>
+  </aside>
 
-<h2>Quellen & weiterführende Links</h2>
-<ul>
-  <li>Deutsche Gesellschaft für Ernährung (DGE) – Empfehlungen</li>
-  <li>Lehrbuch Biologie / Schulbuch (Kapitel Ernährung)</li>
-  <li>Aktuelle Studien und Übersichtsartikel (bei Bedarf angeben)</li>
-</ul>
+  <main class="content">
+    <h1>Kontakt & Quellen</h1>
+    <p>Wenn du Fragen hast oder Quellen brauchst, kontaktiere mich: <strong>dein.name@example.com</strong></p>
 
-<h2>Kontakt</h2>
-<p>Dein Name – E-Mail: deine.email@example.com</p>
+    <h2>Quellen</h2>
+    <ul>
+      <li>Deutsche Gesellschaft für Ernährung (DGE)</li>
+      <li>Schulbuch Biologie — Kapitel: Ernährung & Verdauung</li>
+      <li>Lehrvideos / wissenschaftliche Übersichtsartikel</li>
+    </ul>
 
-<p><em>Hinweis:</em> für die Abgabe kannst du zusätzlich ein PDF mit Quellen und Notizen hochladen.</p>
+    <img class="section-img" src="assets/kontakt.jpg" alt="Kontakt" onerror="this.style.display='none'">
+  </main>
+</div>
+</body>
+</html>

@@ -1,40 +1,58 @@
-<h1>Was bedeutet gesunde Ernährung?</h1>
+<!doctype html>
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gesunde Ernährung — GFS</title>
+<style>
+/* тот же стиль для единообразия */
+:root{--accent:#2e8b57;--card:rgba(255,255,255,0.95);--muted:#666}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;color:#123;background:#f7f7f7}
+.bg{position:fixed;inset:0;background:url('assets/background.jpg') center/cover no-repeat;filter:blur(8px);transform:scale(1.02);z-index:-2}
+.overlay{position:fixed;inset:0;background:linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.6));z-index:-1}
+.container{max-width:1100px;margin:30px auto;display:grid;grid-template-columns:260px 1fr;gap:20px;padding:18px}
+.sidebar{background:var(--card);padding:18px;border-radius:12px;height:calc(100vh-80px);box-shadow:0 10px 30px rgba(0,0,0,0.06);overflow:auto}
+.nav-btn{display:block;padding:12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#3cb371);color:#fff;text-decoration:none;font-weight:700;margin-bottom:10px}
+.content{background:var(--card);padding:26px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.06);min-height:calc(100vh-80px);overflow:auto}
+.section-img{max-width:75%;display:block;margin:18px auto;border-radius:12px}
+@media(max-width:900px){.container{grid-template-columns:1fr;padding:12px}}
+</style>
+</head>
+<body>
+<div class="bg"></div><div class="overlay"></div>
+<div class="container">
+  <aside class="sidebar">
+    <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
+      <img src="assets/header-fruits.jpg" alt="" onerror="this.style.display='none'">
+      <div><strong>GFS</strong><div style="color:var(--muted);font-size:13px">Gesunde Ernährung</div></div>
+    </div>
 
-<p>
-Gesunde Ernährung bedeutet, dem Körper alle notwendigen Nährstoffe in passenden Mengen
-zu geben – so, dass Leistung, Wachstum und Gesundheit optimal unterstützt werden.
-Dazu gehören Makronährstoffe (Kohlenhydrate, Proteine, Fette) und Mikronährstoffe
-(Vitamine, Mineralien). Eine einfache Grundlage sind Gemüse, Obst, Vollkorn,
-pflanzliche Proteine, hochwertige Fette und ausreichend Flüssigkeit.
-</p>
+    <a class="nav-btn" href="index.html">Home</a>
+    <a class="nav-btn" href="ernaehrungsformen.html">Ernährungsformen</a>
+    <a class="nav-btn" href="nahrungsergaenzung.html">Nahrungsergänzung</a>
+    <a class="nav-btn" href="fehlernaehrung.html">Fehlernährung</a>
+    <a class="nav-btn" href="verdauung.html">Verdauung</a>
+    <a class="nav-btn" href="kontakt.html">Kontakt</a>
+  </aside>
 
-<h2>Grundprinzipien</h2>
-<ul>
-  <li>Viel Gemüse und Obst (bunt und saisonal)</li>
-  <li>Vollkorn statt Weißmehl</li>
-  <li>Wenig Zucker und stark verarbeitete Lebensmittel</li>
-  <li>Gesunde Fette (z. B. Olivenöl, Nüsse, Avocado)</li>
-  <li>Ausreichend Wasser (mind. 1,5 Liter, bei Sport mehr)</li>
-</ul>
+  <main class="content">
+    <h1>Was bedeutet gesunde Ernährung?</h1>
+    <p>Gesunde Ernährung liefert alle nötigen Nährstoffe in ausreichender Menge: Proteine, Kohlenhydrate, Fette, Vitamine, Mineralstoffe und Wasser.</p>
 
-<img class="section-img" src="gesunde-ernaehrung.jpg" alt="Gesunde Ernährung">
+    <h2>Grundregeln</h2>
+    <ul>
+      <li>Viel Gemüse & Obst (bunt, saisonal)</li>
+      <li>Vollkornprodukte statt Weißmehl</li>
+      <li>Wenig zugesetzten Zucker & stark verarbeitete Lebensmittel</li>
+      <li>Gesunde Fette: Nüsse, Olivenöl, Avocado</li>
+      <li>Ausreichend trinken (Wasser)</li>
+    </ul>
 
-<h2>Vegetarische & vegane Optionen</h2>
-<p>
-Eine gesunde pflanzenbasierte Ernährung ist möglich — mit besonderer Aufmerksamkeit
-für Proteinquellen (Hülsenfrüchte, Tofu), Eisen (Hülsenfrüchte, grünes Gemüse)
-und Vitamin B12 (Supplemente oder angereicherte Lebensmittel).
-</p>
+    <img class="section-img" src="assets/gesunde_ernaehrung.jpg" alt="Gesunde Ernährung">
 
-<h2>Praktische Tipps für den Alltag</h2>
-<ul>
-  <li>Plane Mahlzeiten: das reduziert Fast Food</li>
-  <li>Bereite Snacks vor (Obst, Nüsse)</li>
-  <li>Vergleiche Etiketten: viel Zucker versteckt sich in Fertigprodukten</li>
-  <li>Esse bewusst und langsam — besseres Sättigungsgefühl</li>
-</ul>
+    <h2>Praktische Tipps</h2>
+    <p>Plane Mahlzeiten, bereite Snacks vor (Obst, Nüsse), vergleiche Zutatenlisten und esse bewusst.</p>
 
-<p>Mit diesen Regeln lässt sich nicht nur Wohlbefinden steigern, sondern auch
-das Risiko vieler chronischer Erkrankungen senken.</p>
-
-<img class="section-img" src="ernaehrungspyramide.jpg" alt="Ernährungspyramide">
+    <img class="section-img" src="assets/ernaehrungspyramide.jpg" alt="Ernährungspyramide">
+  </main>
+</div>
+</body>
+</html>

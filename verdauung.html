@@ -1,47 +1,58 @@
-<h1>Verdauung des Menschen – von Mund bis Darm</h1>
+<!doctype html>
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verdauung — GFS</title>
+<style>
+:root{--accent:#2e8b57;--card:rgba(255,255,255,0.95);--muted:#666}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;color:#123;background:#f7f7f7}
+.bg{position:fixed;inset:0;background:url('assets/background.jpg') center/cover no-repeat;filter:blur(8px);transform:scale(1.02);z-index:-2}
+.overlay{position:fixed;inset:0;background:linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.6));z-index:-1}
+.container{max-width:1100px;margin:30px auto;display:grid;grid-template-columns:260px 1fr;gap:20px;padding:18px}
+.sidebar{background:var(--card);padding:18px;border-radius:12px;height:calc(100vh-80px);box-shadow:0 10px 30px rgba(0,0,0,0.06);overflow:auto}
+.nav-btn{display:block;padding:12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#3cb371);color:#fff;text-decoration:none;font-weight:700;margin-bottom:10px}
+.content{background:var(--card);padding:26px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.06);min-height:calc(100vh-80px);overflow:auto}
+.section-img{max-width:75%;display:block;margin:18px auto;border-radius:12px}
+@media(max-width:900px){.container{grid-template-columns:1fr;padding:12px}}
+</style>
+</head>
+<body>
+<div class="bg"></div><div class="overlay"></div>
+<div class="container">
+  <aside class="sidebar">
+    <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
+      <img src="assets/header-fruits.jpg" alt="" onerror="this.style.display='none'">
+      <div><strong>GFS</strong><div style="color:var(--muted);font-size:13px">Verdauung</div></div>
+    </div>
 
-<p>
-Die Verdauung ist ein komplexer Prozess: beginnt im Mund, läuft über Magen und Dünndarm
-und endet im Dickdarm. Ziel: Nährstoffe in kleine Bausteine zerlegen, damit sie ins Blut
-aufgenommen werden können.
-</p>
+    <a class="nav-btn" href="index.html">Home</a>
+    <a class="nav-btn" href="ernaehrungsformen.html">Ernährungsformen</a>
+    <a class="nav-btn" href="gesundeErnaehrung.html">Gesunde Ernährung</a>
+    <a class="nav-btn" href="nahrungsergaenzung.html">Nahrungsergänzung</a>
+    <a class="nav-btn" href="fehlernaehrung.html">Fehlernährung</a>
+    <a class="nav-btn" href="kontakt.html">Kontakt</a>
+  </aside>
 
-<h2>Mund & Speiseröhre</h2>
-<p>
-Die mechanische Zerkleinerung (Kauen) und die Einwirkung von Speichel (Enzym Amylase)
-beginnen die Kohlenhydratverdauung. Durch Schlucken gelangt der Speisebrei in die Speiseröhre
-und weiter in den Magen.
-</p>
+  <main class="content">
+    <h1>Verdauung des Menschen — von Mund bis Darm</h1>
 
-<h2>Magen</h2>
-<p>
-Im Magen arbeiten Magensäure und Enzyme (Pepsin), um Proteine aufzuschließen. Der Magen
-speichert die Nahrung und gibt sie portionsweise in den Dünndarm.
-</p>
+    <p>Die Verdauung beginnt im Mund (Kauen, Speichelamylase), geht weiter in Magen (Säure, Pepsin) und Dünndarm (Enzyme, Aufnahme). Im Dickdarm wird Wasser resorbiert und die Darmflora fermentiert Ballaststoffe.</p>
 
-<img class="section-img" src="verdauung-schema.jpg" alt="Verdauungsschema">
+    <h2>Mund & Speiseröhre</h2>
+    <p>Kauen zerkleinert Nahrung mechanisch; Speichel beginnt Kohlenhydratverdauung.</p>
+    <img class="section-img" src="assets/mund.jpg" alt="Mund">
 
-<h2>Dünndarm – Hauptort der Aufnahme</h2>
-<p>
-Im Dünndarm wirken Enzyme aus Bauchspeicheldrüse und Darmwand. Fette werden durch Gallensäuren
-emulgiert, Proteine in Aminosäuren und Kohlenhydrate in einfache Zucker zerlegt. Die Dünndarmzotten
-vergrößern die Oberfläche für die Aufnahme.
-</p>
+    <h2>Magen</h2>
+    <p>Magensäure und Enzyme spalten Proteine; der Magen portioniert die Nahrung in den Dünndarm.</p>
+    <img class="section-img" src="assets/magen.jpg" alt="Magen">
 
-<h2>Dickdarm & Darmflora</h2>
-<p>
-Der Dickdarm resorbiert Wasser und Elektrolyte. Die Darmflora besteht aus Billionen Bakterien,
-die Ballaststoffe fermentieren und Vitamine (z. B. K-Vitamine) produzieren. Eine gesunde Darmflora
-unterstützt das Immunsystem und verhindert das Überwuchern schädlicher Keime.
-</p>
+    <h2>Dünndarm</h2>
+    <p>Hier erfolgen Enzymwirkung und Nährstoffaufnahme (Zotten vergrößern Oberfläche).</p>
+    <img class="section-img" src="assets/duenndarm.jpg" alt="Dünndarm">
 
-<img class="section-img" src="darmflora.jpg" alt="Darmflora Infografik">
-
-<h2>Enzyme & ihre Rolle</h2>
-<p>
-Enzyme sind Biokatalysatoren: Amylase, Lipase, Proteasen helfen bei der Spaltung der Nährstoffe.
-Fehlt ein Enzym (z. B. Laktase bei Laktoseintoleranz), führt das zu Verdauungsbeschwerden.
-</p>
-
-<p><strong>Praxis-Tipp:</strong> erkläre beim Vortrag das Schema (Mund → Magen → Dünndarm → Dickdarm)
-und zeige, welche Nährstoffe wo aufgenommen werden — das ist bei Zuhörern sehr einprägsam.</p>
+    <h2>Dickdarm & Darmflora</h2>
+    <p>Dickdarm resorbiert Wasser; Mikroorganismen unterstützen Verdauung und Immunsystem.</p>
+    <img class="section-img" src="assets/darmflora.jpg" alt="Darmflora">
+  </main>
+</div>
+</body>
+</html>

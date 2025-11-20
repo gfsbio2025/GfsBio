@@ -1,69 +1,64 @@
-<h1>Ernährungsformen im Vergleich</h1>
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ernährungsformen — GFS</title>
+<style>
+/* Копия стиля из index — чтобы страницы выглядели одинаково */
+:root{--accent:#2e8b57;--card:rgba(255,255,255,0.95);--muted:#666}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;color:#123;background:#f7f7f7}
+.bg{position:fixed;inset:0;background:url('assets/background.jpg') center/cover no-repeat;filter:blur(8px);transform:scale(1.02);z-index:-2}
+.overlay{position:fixed;inset:0;background:linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.6));z-index:-1}
+.container{max-width:1100px;margin:30px auto;display:grid;grid-template-columns:260px 1fr;gap:20px;padding:18px}
+.sidebar{background:var(--card);padding:18px;border-radius:12px;height:calc(100vh-80px);box-shadow:0 10px 30px rgba(0,0,0,0.06);overflow:auto}
+.logo img{width:56px;height:56px;border-radius:10px}
+.nav-btn{display:block;padding:12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#3cb371);color:#fff;text-decoration:none;font-weight:700;margin-bottom:10px}
+.content{background:var(--card);padding:26px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.06);min-height:calc(100vh-80px);overflow:auto}
+.section-img{max-width:75%;display:block;margin:18px auto;border-radius:12px}
+h1{margin-top:0}
+@media(max-width:900px){.container{grid-template-columns:1fr;padding:12px}}
+</style>
+</head>
+<body>
+<div class="bg"></div><div class="overlay"></div>
+<div class="container">
+  <aside class="sidebar">
+    <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
+      <img src="assets/header-fruits.jpg" alt="" onerror="this.style.display='none'">
+      <div><strong>GFS: Ernährung</strong><div style="color:var(--muted);font-size:13px">Ernährungsformen</div></div>
+    </div>
 
-<p>
-In unserer modernen Gesellschaft gibt es viele verschiedene Arten, sich zu ernähren.
-Die Wahl der Ernährungsform kann kulturelle, ethische, gesundheitliche oder klimatische Gründe haben.
-Im Folgenden vergleichen wir die wichtigsten Varianten, ihre Vorteile und mögliche Risiken.
-</p>
+    <a class="nav-btn" href="index.html">Home</a>
+    <a class="nav-btn" href="gesundeErnaehrung.html">Gesunde Ernährung</a>
+    <a class="nav-btn" href="nahrungsergaenzung.html">Nahrungsergänzung</a>
+    <a class="nav-btn" href="fehlernaehrung.html">Fehlernährung</a>
+    <a class="nav-btn" href="verdauung.html">Verdauung</a>
+    <a class="nav-btn" href="kontakt.html">Kontakt</a>
+  </aside>
 
-<h2>Mischkost</h2>
-<p>
-Die Mischkost ist die traditionelle und in Europa am häufigsten verbreitete Ernährungsform.
-Sie kombiniert pflanzliche Lebensmittel wie Gemüse, Obst, Getreide und Hülsenfrüchte
-mit tierischen Produkten wie Milch, Eiern, Fleisch oder Fisch. Ein Vorteil ist die
-breite Nährstoffversorgung — Proteine, Eisen, Vitamin B12 und Calcium sind in der Regel
-gut abgedeckt. Nachteile ergeben sich oft durch übermäßigen Konsum von rotem Fleisch,
-verarbeiteten Lebensmitteln und Zucker. Für eine gesunde Mischkost sind Portionsgrößen,
-Vollkornprodukte und viel Gemüse zentral.
-</p>
+  <main class="content">
+    <h1>Ernährungsformen im Vergleich</h1>
+    <p>Es existieren viele Ernährungsformen. Hier vergleichen wir Mischkost, vegetarische, vegane und Low-Carb-Ernährung — mit ihren Vor- und Nachteilen.</p>
 
-<img class="section-img" src="mischkost.jpg" alt="Mischkost">
+    <h2>Mischkost</h2>
+    <p>Die Mischkost kombiniert pflanzliche und tierische Lebensmittel. Vorteil: breite Nährstoffversorgung. Nachteil: bei zu viel verarbeitetem Fleisch/Zucker Gesundheitsrisiken.</p>
+    <img class="section-img" src="assets/mischkost.jpg" alt="Mischkost">
 
-<h2>Vegetarische Ernährung</h2>
-<p>
-Vegetarier verzichten auf Fleisch und Fisch. Es gibt mehrere Varianten:
-Lacto-Ovo-Vegetarier essen Milchprodukte und Eier, Lacto-Vegetarier Milchprodukte,
-aber keine Eier. Vorteile: Vegetarische Ernährung kann zu einem geringeren Risiko
-für Herz-Kreislauf-Erkrankungen und einigen Krebsarten führen, da meist weniger gesättigte
-Fette konsumiert werden. Eine Herausforderung ist die Sicherstellung ausreichender Eisen-,
-Zink- und Vitamin-B12-Versorgung — vor allem bei Jugendlichen und Schwangeren.
-Bewusste Planung (z. B. Kombination von Vitamin-C-reichen Lebensmitteln mit Eisenquellen)
-reduziert diese Risiken.
-</p>
+    <h2>Vegetarisch</h2>
+    <p>Verzicht auf Fleisch/Fisch. Varianten: Lacto-Ovo, Lacto. Vorteil: oft gesünderes Fettprofil. Achtung: Eisen & B12.</p>
+    <img class="section-img" src="assets/vegetarisch.jpg" alt="Vegetarisch">
 
-<img class="section-img" src="vegetarisch.jpg" alt="Vegetarisch">
+    <h2>Vegan</h2>
+    <p>Keine tierischen Produkte. Viele Ballaststoffe; B12 & Omega-3 müssen beachtet / ergänzt werden.</p>
+    <img class="section-img" src="assets/vegan.jpg" alt="Vegan">
 
-<h2>Vegane Ernährung</h2>
-<p>
-Veganer verzichten vollständig auf tierische Produkte. Diese Ernährungsform liefert
-oft sehr viele Ballaststoffe, sekundäre Pflanzenstoffe und Vitamine aus Gemüse und Obst.
-Allerdings fehlen natürliche Quellen für Vitamin B12 und oft Omega-3-Fettsäuren in bioverfügbarer Form.
-Daher ist die regelmäßige Kontrolle und gegebenenfalls Supplementierung wichtig.
-Menschen, die vegan leben, sollten auf eine ausreichende Zufuhr von Protein (z. B. durch
-Hülsenfrüchte, Sojaprodukte), Calcium und Vitamin D achten.
-</p>
+    <h2>Low-Carb</h2>
+    <p>Reduzierte Kohlenhydrate, erhöhte Fette/Proteine. Kurzfristig oft Gewichtsverlust; langfristig Vorsicht bei Herz-Risiko und Nährstoffmangel.</p>
+    <img class="section-img" src="assets/lowcarb.jpg" alt="Low Carb">
 
-<img class="section-img" src="vegan.jpg" alt="Vegan">
-
-<h2>Low-Carb / Keto</h2>
-<p>
-Bei Low-Carb wird die Aufnahme von Kohlenhydraten deutlich reduziert, dafür steigt
-der Anteil von Proteinen und Fetten. Manche setzen diese Strategie zur Gewichtsreduktion
-ein, weil sie kurzfristig den Blutzucker stabilisieren und Hungergefühle reduzieren kann.
-Langfristig kann ein unausgewogen hoher Fettkonsum allerdings das Risiko für Herzkrankheiten
-erhöhen, und es besteht die Gefahr von Nährstoffmängeln (z. B. Vitamine aus Gemüse, Ballaststoffe).
-Deshalb ist eine ärztliche Beratung sinnvoll.
-</p>
-
-<img class="section-img" src="lowcarb.jpg" alt="Low Carb">
-
-<h2>Vergleich & Fazit</h2>
-<p>
-Keine Ernährungsform ist pauschal „die richtige“ für alle Menschen. Wichtig sind:
-Ausgewogenheit, Vielfalt, ausreichende Flüssigkeitszufuhr und das Wissen um kritische
-Nährstoffe. Für eine Präsentation kannst du betonen, dass bewusste Entscheidungen,
-zuverlässige Informationsquellen und regelmäßige Kontrolle (bei Bedarf Blutuntersuchungen)
-essenziell sind.
-</p>
-
-<img class="section-img" src="vergleich-tabelle.jpg" alt="Vergleichstabelle">
+    <h2>Fazit</h2>
+    <p>Wichtig ist: Ausgewogenheit, Vielfalt und Wissen um kritische Nährstoffe. Für die Schule: nenne Pro/Contra und Beispiele für jeden Typ.</p>
+  </main>
+</div>
+</body>
+</html>

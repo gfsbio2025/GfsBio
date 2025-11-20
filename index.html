@@ -1,76 +1,182 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<title>GFS Ernährung und Verdauung</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>GFS: Ernährung und Verdauung</title>
+
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        display: flex;
-        height: 100vh;
-    }
+  :root{
+    --accent:#2e8b57; /* мягкий зелёный */
+    --card-bg: rgba(255,255,255,0.90);
+    --muted: #666;
+    --button-radius:10px;
+    --max-width:1100px;
+  }
 
-    .menu {
-        width: 250px;
-        background: #f0f0f0;
-        padding: 20px;
-        box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-    }
+  html,body{height:100%;margin:0;font-family: "Helvetica Neue", Arial, sans-serif;color:#123;}
+  /* фон-размытие: используем отдельный элемент, чтобы текст не размывался */
+  .bg {
+    position: fixed;
+    inset: 0;
+    background-image: url('/mnt/data/IMG_D1B1CA52-01FD-4246-A6C8-AFC730A2F6C7.jpeg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px) saturate(1.05);
+    transform: scale(1.05);
+    z-index: -2;
+  }
+  .bg::after{
+    content:"";
+    position:absolute;inset:0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.15), rgba(255,255,255,0.35));
+    mix-blend-mode: overlay;
+  }
 
-    .menu button {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 10px;
-        font-size: 16px;
-        cursor: pointer;
-        border: none;
-        background: #4CAF50;
-        color: white;
-        border-radius: 5px;
-    }
+  /* Полупрозрачный слой для читаемости */
+  .overlay {
+    position: fixed; inset: 0; background: rgba(255,255,255,0.55); z-index:-1;
+    backdrop-filter: blur(1px);
+  }
 
-    .menu button:hover {
-        background: #45a049;
-    }
+  .container{
+    max-width: var(--max-width);
+    margin: 32px auto;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 24px;
+    align-items:start;
+    padding: 20px;
+  }
 
-    .content {
-        padding: 30px;
-        flex-grow: 1;
-        overflow-y: auto;
-    }
+  .sidebar{
+    background: var(--card-bg);
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    height: calc(100vh - 80px);
+    overflow:auto;
+  }
 
-    img {
-        max-width: 60%;
-        display: block;
-        margin: 20px auto;
-        border-radius: 10px;
-    }
+  .logo{
+    display:flex; gap:12px; align-items:center; margin-bottom:12px;
+  }
+  .logo img{width:56px;height:56px; object-fit:cover; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+  h2.title{margin:0;font-size:18px}
+  p.sub{margin:4px 0 12px;color:var(--muted); font-size:13px}
+
+  .nav-btn{
+    width:100%; text-align:left; padding:12px 14px;
+    margin-bottom:10px; border-radius:var(--button-radius);
+    border:none; cursor:pointer; font-weight:600; color:white;
+    background: linear-gradient(90deg,var(--accent), #3cb371);
+    box-shadow: 0 6px 14px rgba(46,139,87,0.18);
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+  .nav-btn:hover{ transform: translateY(-3px); box-shadow:0 10px 20px rgba(46,139,87,0.2) }
+
+  .sidebar small{display:block;color:var(--muted); margin-top:8px}
+
+  .content {
+    background: rgba(255,255,255,0.95);
+    border-radius: 14px;
+    padding: 28px;
+    min-height: calc(100vh - 80px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    overflow:auto;
+  }
+
+  .hero {
+    display:flex; gap:20px; align-items:center;
+    margin-bottom:16px;
+  }
+  .hero h1{margin:0;font-size:28px}
+  .hero p{margin:6px 0 0;color:var(--muted)}
+  .hero .cta{margin-left:auto}
+
+  img.section-img{max-width:70%; display:block; margin:18px auto; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+
+  h1,h2{color:#123}
+  h2{margin-top:18px}
+  p{line-height:1.55; font-size:16px; color:#233}
+
+  /* таблицы, списки */
+  ul{margin-left:18px}
+  .hint{font-size:13px;color:var(--muted); margin-top:10px}
+
+  /* адаптив */
+  @media (max-width:900px){
+    .container{grid-template-columns:1fr; padding:12px}
+    .sidebar{height:auto; display:flex; gap:12px; overflow:visible}
+    .hero{flex-direction:column; align-items:flex-start}
+    img.section-img{max-width:100%}
+  }
 </style>
+
 </head>
 <body>
 
-<div class="menu">
-    <button onclick="show('ernaehrungsformen')">Ernährungsformen</button>
-    <button onclick="show('gesundeErnaehrung')">Gesunde Ernährung</button>
-    <button onclick="show('nahrungsergaenzung')">Nahrungsergänzungsmittel</button>
-    <button onclick="show('fehlernaehrung')">Fehlernährung & Folgen</button>
-    <button onclick="show('verdauung')">Verdauung des Menschen</button>
-</div>
+<div class="bg"></div>
+<div class="overlay"></div>
 
-<div class="content" id="content">
-    <h1>Willkommen!</h1>
-    <p>Klicke links auf ein Thema, um die Präsentation zu starten.</p>
+<div class="container">
+  <aside class="sidebar">
+    <div class="logo">
+      <!-- сюда можно положить маленькое изображение header (если хочешь, используй один из загруженных) -->
+      <img src="header-fruits.jpg" alt="Früchte Header" onerror="this.style.display='none'">
+      <div>
+        <h2 class="title">GFS: Ernährung & Verdauung</h2>
+        <p class="sub">Präsentation — Biologie (Klasse) • Dein Name</p>
+      </div>
+    </div>
+
+    <button class="nav-btn" onclick="show('ernaehrungsformen')">Ernährungsformen</button>
+    <button class="nav-btn" onclick="show('gesundeErnaehrung')">Gesunde Ernährung</button>
+    <button class="nav-btn" onclick="show('nahrungsergaenzung')">Nahrungsergänzungsmittel</button>
+    <button class="nav-btn" onclick="show('fehlernaehrung')">Fehlernährung & Folgen</button>
+    <button class="nav-btn" onclick="show('verdauung')">Verdauung des Menschen</button>
+    <button class="nav-btn" onclick="show('kontakt')">Kontakt / Quellen</button>
+
+    <small>Tip: klicke die Themen nacheinander oder springe direkt zum Abschnitt.</small>
+  </aside>
+
+  <main class="content" id="content">
+    <!-- начальное содержимое -->
+    <div class="hero">
+      <div>
+        <h1>Willkommen zu meiner GFS-Präsentation</h1>
+        <p>Zum Thema: <strong>Ernährung und Verdauung</strong></p>
+        <p class="hint">Klicke links ein Thema an — rechts erscheint der jeweilige Text mit Bildern. Viel Erfolg!</p>
+      </div>
+      <div class="cta">
+        <small class="hint">Sprichtext: Lies die Abschnitte langsam, erkläre Bilder, halte Blick zum Publikum.</small>
+      </div>
+    </div>
+
+    <p>Diese Präsentation erklärt verschiedene Ernährungsformen, warum gesunde Ernährung wichtig ist,
+    welche Rolle Nahrungsergänzungsmittel spielen, welche Folgen Fehlernährung hat und wie die Verdauung funktioniert.
+    Jeder Abschnitt enthält ein Bild und ausführlichen Text, den du während der Präsentation nutzen kannst.</p>
+
+    <img class="section-img" src="header-fruits-wide.jpg" alt="Früchte" onerror="this.style.display='none'">
+  </main>
 </div>
 
 <script>
-    function show(part) {
-        fetch(part + ".html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("content").innerHTML = data;
-        });
-    }
+  // показывает файл с окончанием .html, берёт тот же путь, где лежит index
+  function show(part) {
+    fetch(part + ".html")
+      .then(r => {
+        if (!r.ok) throw new Error("Не найден файл: " + part + ".html");
+        return r.text();
+      })
+      .then(html => {
+        document.getElementById("content").innerHTML = html;
+        window.scrollTo({top:0, behavior:'smooth'});
+      })
+      .catch(e => {
+        document.getElementById("content").innerHTML = "<h2>Fehler</h2><p>Die Seite konnte nicht geladen werden: " + e.message + "</p>";
+      });
+  }
 </script>
 
 </body>

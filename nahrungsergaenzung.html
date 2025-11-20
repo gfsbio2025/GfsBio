@@ -1,33 +1,54 @@
-<h1>Nahrungsergänzungsmittel: Sinnvoll oder nicht?</h1>
+<!doctype html>
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nahrungsergänzung — GFS</title>
+<style>
+:root{--accent:#2e8b57;--card:rgba(255,255,255,0.95);--muted:#666}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;color:#123;background:#f7f7f7}
+.bg{position:fixed;inset:0;background:url('assets/background.jpg') center/cover no-repeat;filter:blur(8px);transform:scale(1.02);z-index:-2}
+.overlay{position:fixed;inset:0;background:linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.6));z-index:-1}
+.container{max-width:1100px;margin:30px auto;display:grid;grid-template-columns:260px 1fr;gap:20px;padding:18px}
+.sidebar{background:var(--card);padding:18px;border-radius:12px;height:calc(100vh-80px);box-shadow:0 10px 30px rgba(0,0,0,0.06);overflow:auto}
+.nav-btn{display:block;padding:12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#3cb371);color:#fff;text-decoration:none;font-weight:700;margin-bottom:10px}
+.content{background:var(--card);padding:26px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.06);min-height:calc(100vh-80px);overflow:auto}
+.section-img{max-width:75%;display:block;margin:18px auto;border-radius:12px}
+@media(max-width:900px){.container{grid-template-columns:1fr;padding:12px}}
+</style>
+</head>
+<body>
+<div class="bg"></div><div class="overlay"></div>
+<div class="container">
+  <aside class="sidebar">
+    <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
+      <img src="assets/header-fruits.jpg" alt="" onerror="this.style.display='none'">
+      <div><strong>GFS</strong><div style="color:var(--muted);font-size:13px">Nahrungsergänzung</div></div>
+    </div>
 
-<p>
-Nahrungsergänzungsmittel (Supplemente) sind Ergänzungen zur normalen Nahrung:
-Vitamine, Mineralstoffe, Omega-3-Fettsäuren, Probiotika u.ä. Sie können sinnvoll sein,
-wenn ein echter Mangel nachgewiesen ist oder besondere Lebensumstände (z. B. Schwangerschaft,
-strenge Diäten, bestimmte Erkrankungen) vorliegen.
-</p>
+    <a class="nav-btn" href="index.html">Home</a>
+    <a class="nav-btn" href="ernaehrungsformen.html">Ernährungsformen</a>
+    <a class="nav-btn" href="gesundeErnaehrung.html">Gesunde Ernährung</a>
+    <a class="nav-btn" href="fehlernaehrung.html">Fehlernährung</a>
+    <a class="nav-btn" href="verdauung.html">Verdauung</a>
+    <a class="nav-btn" href="kontakt.html">Kontakt</a>
+  </aside>
 
-<h2>Wann sinnvoll?</h2>
-<ul>
-  <li>Vitamin B12 bei veganer Ernährung</li>
-  <li>Vitamin D in sonnenarmen Regionen oder im Winter</li>
-  <li>Eisen bei diagnostiziertem Eisenmangel</li>
-  <li>Folsäure in der Schwangerschaft</li>
-</ul>
+  <main class="content">
+    <h1>Nahrungsergänzungsmittel — sinnvoll oder nicht?</h1>
 
-<img class="section-img" src="supplements.jpg" alt="Supplements">
+    <p>Nahrungsergänzungsmittel (Supplemente) können sinnvoll sein, wenn ein tatsächlicher Mangel besteht oder besondere Lebensumstände vorliegen (z. B. Schwangerschaft, vegane Ernährung). Zu den häufig verwendeten Präparaten zählen Vitamin D, Vitamin B12, Omega-3 und Eisen.</p>
 
-<h2>Risiken bei unbedachtem Einsatz</h2>
-<p>
-Viele Menschen nehmen Supplemente ohne vorherige Untersuchung. Überdosierungen
-(z. B. fettlösliche Vitamine wie A oder D) können schaden. Auch Wechselwirkungen
-mit Medikamenten sind möglich. Deshalb: vor Einnahme Arzt / Ärztin oder Apotheker/in fragen.
-</p>
+    <h2>Wann sinnvoll?</h2>
+    <ul>
+      <li>Vitamin B12 bei veganer Ernährung</li>
+      <li>Vitamin D in sonnenarmen Monaten</li>
+      <li>Eisen bei diagnostiziertem Mangel</li>
+    </ul>
 
-<h2>Probiotika & Darmgesundheit</h2>
-<p>
-Probiotika können die Darmflora positiv beeinflussen, besonders nach Antibiotika-Behandlungen.
-Eine dauerhafte, gesunde Darmflora fördern jedoch hauptsächlich Ballaststoffe und pflanzliche Vielfalt.
-</p>
+    <img class="section-img" src="assets/supplements.jpg" alt="Supplements">
 
-<img class="section-img" src="b12.jpg" alt="Vitamin B12 Hinweis">
+    <h2>Risiken</h2>
+    <p>Unbedachte Einnahme kann schaden (Überdosierung) oder Wechselwirkungen mit Medikamenten verursachen. Immer mit Fachperson abklären.</p>
+  </main>
+</div>
+</body>
+</html>
